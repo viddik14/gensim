@@ -341,11 +341,11 @@ CYTHON_STR = 'Cython==0.29.32'
 # Allow overriding the Cython version requirement
 CYTHON_STR = os.environ.get('GENSIM_CYTHON_REQUIRES', CYTHON_STR)
 
-install_requires = [
+install_requires = list([
     NUMPY_STR,
     'scipy >= 1.7.0',
     'smart_open >= 1.8.1',
-]
+])
 
 if need_cython():
     install_requires.append(CYTHON_STR)
